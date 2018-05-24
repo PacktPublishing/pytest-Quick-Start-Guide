@@ -5,8 +5,8 @@ def test_regex_matching():
 
 
 def test_check_options():
-    pass
+    assert 0
 
 
 def test_type_checking():
-    pass
+    assert 0
