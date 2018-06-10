@@ -1,13 +1,13 @@
 import csv
 from collections import namedtuple
 
-DATA = '''
+DATA = """
 Main Grid,48,44
 2nd Grid,24,21
 3rd Grid,24,null
-'''
+"""
 
-GridData = namedtuple('GridData', 'name total_cells active_cells')
+GridData = namedtuple("GridData", "name total_cells active_cells")
 
 
 def convert_size(s):
@@ -30,6 +30,6 @@ def iter_grids_from_csv(lines):
 def test_read_properties():
     lines = DATA.strip().splitlines()
     grids = list(iter_grids_from_csv(lines))
-    assert grids[0] == GridData('Main Grid', 48, 44)
-    assert grids[1] == GridData('2nd Grid', 24, 21)
-    assert grids[2] == GridData('3rd Grid', 24, 0)
+    assert grids[0] == GridData("Main Grid", 48, 44)
+    assert grids[1] == GridData("2nd Grid", 24, 21)
+    assert grids[2] == GridData("3rd Grid", 24, 0)

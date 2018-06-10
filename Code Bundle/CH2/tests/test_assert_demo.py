@@ -25,7 +25,7 @@ def test_approx_list():
 
 
 def test_approx_dict():
-    values = {'v1': 0.1 + 1.2, 'v2': 0.2 + 0.8}
+    values = {"v1": 0.1 + 1.2, "v2": 0.2 + 0.8}
     assert values == approx(dict(v1=1.3, v2=1.0))
 
 
@@ -39,6 +39,7 @@ def test_approx_list_fail():
 
 def test_approx_numpy():
     import numpy as np
+
     values = np.array([0.1, 0.2]) + np.array([1.2, 0.8])
     assert values == approx(np.array([1.3, 1.0]))
 
@@ -52,60 +53,70 @@ def test_magnitude():
 
 
 def get_default_health(class_name):
-    assert class_name == 'warrior'
+    assert class_name == "warrior"
     return 80
 
 
 def test_default_health():
-    health = get_default_health('warrior')
+    health = get_default_health("warrior")
     assert health == 95
 
 
 def get_default_player_class():
-    return 'warrior'
+    return "warrior"
 
 
 def test_default_player_class():
     x = get_default_player_class()
-    assert x == 'sorcerer'
+    assert x == "sorcerer"
 
 
 def get_short_class_description(class_name):
-    assert class_name == 'warrior'
-    return 'A battle-hardened veteran, favors heavy armor and weapons.'
+    assert class_name == "warrior"
+    return "A battle-hardened veteran, favors heavy armor and weapons."
 
 
 def test_warrior_short_description():
-    desc = get_short_class_description('warrior')
-    assert desc == 'A battle-hardened veteran, can equip heavy armor and weapons.'
+    desc = get_short_class_description("warrior")
+    assert (
+        desc
+        == "A battle-hardened veteran, can equip heavy armor and weapons."
+    )
 
 
 def get_long_class_description(class_name):
-    assert class_name == 'warrior'
-    return textwrap.dedent('''\
+    assert class_name == "warrior"
+    return textwrap.dedent(
+        """\
     A seasoned veteran of many battles. High Strength and Dexterity
     allow to yield heavy armor and weapons, as well as carry
     more equipment while keeping a light roll. Weak in magic.            
-    ''')
+    """
+    )
 
 
 def test_warrior_long_description():
-    desc = get_long_class_description('warrior')
-    assert desc == textwrap.dedent('''\
+    desc = get_long_class_description("warrior")
+    assert (
+        desc
+        == textwrap.dedent(
+            """\
         A seasoned veteran of many battles. Strength and Dexterity
         allow to yield heavy armor and weapons, as well as carry
         more equipment. Weak in magic.            
-        ''')
+        """
+        )
+    )
 
 
 def get_starting_equipment(class_name):
-    assert class_name == 'warrior'
-    return ['long sword', 'warrior set', 'shield']
+    assert class_name == "warrior"
+    return ["long sword", "warrior set", "shield"]
 
 
 def test_get_starting_equiment():
-    expected = ['long sword', 'shield']
-    assert get_starting_equipment('warrior') == expected
+    expected = ["long sword", "shield"]
+    assert get_starting_equipment("warrior") == expected
 
 
 def test_long_list():
@@ -115,17 +126,17 @@ def test_long_list():
 
 
 def get_classes_starting_health():
-    return {'warrior': 85, 'sorcerer': 55, 'knight': 95}
+    return {"warrior": 85, "sorcerer": 55, "knight": 95}
 
 
 def test_starting_health():
-    expected = {'warrior': 85, 'sorcerer': 50}
+    expected = {"warrior": 85, "sorcerer": 50}
     assert get_classes_starting_health() == expected
 
 
 def get_player_classes():
-    return {'warrior', 'knight', 'sorcerer'}
+    return {"warrior", "knight", "sorcerer"}
 
 
 def test_player_classes():
-    assert get_player_classes() == {'warrior', 'sorcerer'}
+    assert get_player_classes() == {"warrior", "sorcerer"}

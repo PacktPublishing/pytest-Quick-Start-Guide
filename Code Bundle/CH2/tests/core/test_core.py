@@ -1,5 +1,3 @@
-
-
 def test_regex_matching():
     pass
 
