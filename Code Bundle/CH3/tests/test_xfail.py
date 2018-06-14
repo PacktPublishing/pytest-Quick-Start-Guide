@@ -41,3 +41,16 @@ def collide(p1, p2):
 )
 def test_undefined_particle_collision_crash():
     collide(Particle(), Particle())
+
+
+def initialize_physics():
+    pass
+
+
+def test_particle_splitting():
+    initialize_physics()
+    import numpy
+
+    if numpy.__version__ < "1.13":
+        pytest.xfail("split computation fails with numpy < 1.13")
+    ...
