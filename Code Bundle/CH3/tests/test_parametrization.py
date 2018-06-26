@@ -127,7 +127,7 @@ class JSONSerializer:
 
     @functools.singledispatch
     def deserialize(self, data: str) -> Any:
-        raise NotImplementedError(f"{obj:!r}")
+        raise NotImplementedError(f"{data:!r}")
 
     @serialize.register(Quantity)
     def _serialize_quantity(self, quantity: Quantity) -> str:
