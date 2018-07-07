@@ -42,3 +42,21 @@ def test_highest_rated(comedy_series):
 
 def test_oldest(comedy_series):
     assert oldest(comedy_series) == "Seinfeld"
+
+
+class Test:
+
+    @pytest.fixture
+    def drama_series(self):
+        return [
+            ("The Mentalist", 2008, 8.1),
+            ("Game of Thrones", 2011, 9.5),
+            ("The Newsroom", 2012, 8.6),
+            ("Cosmos", 1980, 9.3),
+        ]
+
+    def test_highest_rated(self, drama_series):
+        assert highest_rated(drama_series) == "Game of Thrones"
+
+    def test_oldest(self, drama_series):
+        assert oldest(drama_series) == "Cosmos"
