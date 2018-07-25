@@ -3,4 +3,4 @@ def test_visit_pytest(selenium):
     assert "helps you write better programs" in selenium.title
     elem = selenium.find_element_by_link_text("Contents")
     elem.click()
-    assert "Full pytest documentation" in selenium.title
+    assert "Full pytest docs" in selenium.title
