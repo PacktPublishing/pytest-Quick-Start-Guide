@@ -2,7 +2,7 @@ import getpass
 
 
 def user_login(name):
-    getpass.getpass()
+    getpass.getpass("enter password: ")
     return 1
 
 
@@ -11,4 +11,4 @@ def test_login_success(mocker):
         getpass, "getpass", return_value="valid-pass"
     )
     assert user_login("test-user")
-    assert mocked.call_count == 1
+    mocked.assert_called_with("enter password: ")
