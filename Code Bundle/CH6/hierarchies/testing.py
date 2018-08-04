@@ -1,4 +1,6 @@
 import os
+import tempfile
+from unittest import mock
 import unittest
 
 
@@ -14,24 +16,30 @@ class DataBaseTesting(unittest.TestCase):
 
     def create_temporary_db(self):
         ...
+        return tempfile.NamedTemporaryFile(delete=False).name
 
     def connect_db(self, db_file):
         ...
+        return mock.MagicMock()
 
-    def create_table(self, name, **fields):
+    def create_table(self, table_name, **fields):
         ...
 
-    def check_row(self, name, **query):
+    def check_row(self, table_name, **query):
         ...
 
 
 class GUITesting(unittest.TestCase):
 
     def setUp(self):
-        self._app = self.create_app()
+        self.app = self.create_app()
 
     def tearDown(self):
-        self._app.close_all_windows()
+        self.app.close_all_windows()
+
+    def create_app(self):
+        ...
+        return mock.MagicMock()
 
     def mouse_click(self, window, button):
         ...
