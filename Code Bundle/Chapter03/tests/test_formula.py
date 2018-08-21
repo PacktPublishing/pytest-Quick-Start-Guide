@@ -1,18 +1,31 @@
+import math
+
 import pytest
+import attr
 
 
 class FormulaTokenizer(object):
     pass
 
 
+@attr.s
 class Formula(object):
 
+    expr = attr.ib()
+
     @classmethod
-    def from_string(cls, param, tokenizer):
-        return cls()
+    def from_string(cls, expr, tokenizer):
+        return cls(expr)
 
     def eval(self, **kwargs):
-        return 0.0
+        kwargs.update(
+            {
+                n: getattr(math, n)
+                for n in dir(math)
+                if not n.startswith("_")
+            }
+        )
+        return eval(self.expr, kwargs)
 
 
 def test_formula_parsing():
