@@ -1,5 +1,8 @@
 import os
+import tempfile
 import unittest
+from pathlib import Path
+from unittest import mock
 
 
 class DataBaseTesting:
@@ -25,12 +28,20 @@ class DataBaseTesting:
 
     def create_temporary_db(self):
         ...
+        # wrong way of obtaining a temp filename follows
+        fd, name = tempfile.mkstemp()
+        os.close(fd)
+        f = Path(name)
+        f.write_text("")
+        return str(f)
 
     def connect_db(self, db_file):
         ...
+        return mock.MagicMock()
 
-    def create_table(self, name, **fields):
+    def create_table(self, table_name, **fields):
         ...
+        return mock.MagicMock()
 
 
 class Test(unittest.TestCase):
