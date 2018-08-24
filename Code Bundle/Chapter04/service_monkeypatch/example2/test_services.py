@@ -1,4 +1,4 @@
-import services
+from . import services
 
 
 def test_start_service(monkeypatch):

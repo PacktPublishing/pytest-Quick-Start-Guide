@@ -16,19 +16,10 @@ def show_usage():
 def test_usage(capsys):
     script_main([])
     captured = capsys.readouterr()
-    assert (
-        captured.out
-        == dedent(
-            """\
+    expected = dedent(
+        """\
         Create/update webhooks.
           Usage: hooks REPO URL
     """
-        )
     )
-
-
-import _image_processing
-
-
-def process_pending_events():
-    print("")
+    assert captured.out == expected

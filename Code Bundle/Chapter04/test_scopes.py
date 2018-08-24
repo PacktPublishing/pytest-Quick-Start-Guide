@@ -1,8 +1,10 @@
+from unittest.mock import MagicMock
+
 import pytest
 
 
 def connect_to_db(host, ns):
-    return None
+    return MagicMock()
 
 
 class Series:

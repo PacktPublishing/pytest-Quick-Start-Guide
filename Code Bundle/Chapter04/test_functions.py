@@ -1,3 +1,5 @@
+from unittest.mock import MagicMock
+
 import pytest
 
 
@@ -11,6 +13,11 @@ class WindowManager:
         Close the WindowManager and all associated resources.        
         """
         ...
+
+    def new_help_window(self, fn):
+        window = MagicMock()
+        window.title.return_value = "Pipe Setup Help"
+        return window
 
 
 @pytest.fixture

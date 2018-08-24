@@ -1,8 +1,7 @@
-import functools
-from typing import Any
+import json
 
-import pytest
 import attr
+import pytest
 
 
 @attr.s
@@ -19,29 +18,25 @@ class Pipe:
 
 class JSONSerializer:
 
-    @functools.singledispatch
-    def serialize(self, obj: Any) -> str:
-        raise NotImplementedError(f"{obj:!r}")
-
-    @functools.singledispatch
-    def deserialize(self, data: str) -> Any:
-        raise NotImplementedError(f"{data:!r}")
-
-    @serialize.register(Quantity)
-    def _serialize_quantity(self, quantity: Quantity) -> str:
+    def serialize_quantity(self, quantity: Quantity) -> str:
         ...
+        return json.dumps(attr.asdict(quantity))
 
-    @deserialize.register(Quantity)
-    def _deserialize_quantity(self, data: str) -> Quantity:
+    def deserialize_quantity(self, data: str) -> Quantity:
         ...
+        return Quantity(**json.loads(data))
 
-    @serialize.register(Pipe)
-    def _serialize_pipe(self, pipe: Pipe) -> str:
+    def serialize_pipe(self, pipe: Pipe) -> str:
         ...
+        return json.dumps(attr.asdict(pipe))
 
-    @deserialize.register(Pipe)
-    def _deserialize_pipe(self, data: str) -> Pipe:
+    def deserialize_pipe(self, data: str) -> Pipe:
         ...
+        d = json.loads(data)
+        return Pipe(
+            length=Quantity(**d["length"]),
+            diameter=Quantity(**d["diameter"]),
+        )
 
 
 class XMLSerializer(JSONSerializer):
@@ -62,14 +57,14 @@ class Test:
 
     def test_quantity(self, serializer):
         quantity = Quantity(10, "m")
-        data = serializer.serialize(quantity)
-        new_quantity = serializer.deserialize(data)
+        data = serializer.serialize_quantity(quantity)
+        new_quantity = serializer.deserialize_quantity(data)
         assert new_quantity == quantity
 
     def test_pipe(self, serializer):
         pipe = Pipe(
             length=Quantity(1000, "m"), diameter=Quantity(35, "cm")
         )
-        data = serializer.serialize(pipe)
-        new_pipe = serializer.deserialize(data)
+        data = serializer.serialize_pipe(pipe)
+        new_pipe = serializer.deserialize_pipe(data)
         assert new_pipe == pipe

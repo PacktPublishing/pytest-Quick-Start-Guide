@@ -12,5 +12,3 @@ def tmp_path(request) -> Path:
 
 def test_tmp_path(tmp_path):
     assert list(tmp_path.iterdir()) == []
-    print(tmp_path)
-    assert 0
