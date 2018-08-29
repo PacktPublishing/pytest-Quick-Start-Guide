@@ -1,5 +1,5 @@
 # pytest Quick Start Guide
-<a href="Packt UTM book"><img src="https://d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11325.png" alt="pytest Quick Start Guide" height="256px" align="right"></a>
+<a href="Packt UTM book"><img src="Cover address of the book"></a>
 
 This is the code repository for [pytest Quick Start Guide](Packt UTM book), published by Packt.
 
