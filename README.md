@@ -3,7 +3,7 @@
 
 This is the code repository for [pytest Quick Start Guide](Packt UTM book), published by Packt.
 
-**Write better Python code with simple and maintainable tests	**
+**Write better Python code with simple and maintainable tests**
 
 ## What is this book about?
 	Python's standard unittest module is based on the xUnit family of frameworks, which has its origins in Smalltalk and Java, and tends to be verbose to use and not easily extensible.The pytest framework on the other hand is very simple to get started, but powerful enough to cover complex testing integration scenarios, being considered by many the true Pythonic approach to testing in Python.
