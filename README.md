@@ -1,7 +1,8 @@
 # pytest Quick Start Guide
-<a href="Packt UTM book"><img src="Cover address of the book"></a>
+<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="pytest Quick Start Guide" height="256px" align="right"></a>
 
-This is the code repository for [pytest Quick Start Guide](Packt UTM book), published by Packt.
+This is the code repository for [pytest Quick Start Guide](Packt UTM URL of the Book), published by Packt.
+
 
 **Write better Python code with simple and maintainable tests**
 
