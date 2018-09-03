@@ -48,7 +48,7 @@ With the following software and hardware list you can run all code files present
 | 1 to 6   | Python 3                            | Windows, Mac OS X, and Linux (Any) |
 
 
-### Related products <Other books you may enjoy>
+### Related products
 * Python Testing Cookbook - Second Edition [[Packt]](https://www.packtpub.com/application-development/python-testing-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781787122529) [[Amazon]](https://www.amazon.com/dp/1787122522)
 
 * Selenium WebDriver 3 Practical Guide - Second Edition [[Packt]](https://www.packtpub.com/web-development/selenium-webdriver-3-practical-guide-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788999762) [[Amazon]](https://www.amazon.com/dp/B07BJKWB1J)
