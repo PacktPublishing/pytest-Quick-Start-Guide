@@ -4,6 +4,8 @@
 This is the code repository for [pytest Quick Start Guide](https://www.packtpub.com/web-development/pytest-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789347562), published by Packt.
 
 
+**Author**: Bruno Oliveira ([@nicoddemus](https://github.com/nicoddemus))
+
 **Write better Python code with simple and maintainable tests**
 
 ## What is this book about?
@@ -23,12 +25,14 @@ If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789
 alt="https://www.packtpub.com/" border="5" /></a>
 
 
-## Instructions and Navigations
+## Instructions and Navigation
+
 All of the code is organized into folders. For example, Chapter02.
 
-The code will look like the following:
-```
-# contents of test_player_mechanics.py
+The code looks like the following:
+
+```python
+    # contents of test_player_mechanics.py
     def test_player_hit():
         player = create_player()
         assert player.health == 100
