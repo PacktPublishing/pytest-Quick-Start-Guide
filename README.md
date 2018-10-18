@@ -59,8 +59,8 @@ With the following software and hardware list you can run all code files present
 * Selenium WebDriver 3 Practical Guide - Second Edition [[Packt]](https://www.packtpub.com/web-development/selenium-webdriver-3-practical-guide-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788999762) [[Amazon]](https://www.amazon.com/dp/B07BJKWB1J)
 
 ## Get to Know the Author
-**Bruno Oliveira**
-Bruno Oliveira is a software developer with 18 years experience working at ESSS, developing desktop and web applications for simulation and numerical analysis for several industry sectors including oil and gas, aerospace, automotive, and chemical processes. Having taken part in the development of an internal testing framework to attend to the various needs of the applications he worked with, and having always been interested in testing and software quality, in 2012, Bruno took note of pytest and immediately fell in love with the project. He started contributing whenever he could and has been a pytest core contributor since 2014.
+
+**Bruno Oliveira** is a software developer with 18 years experience working at ESSS, developing desktop and web applications for simulation and numerical analysis for several industry sectors including oil and gas, aerospace, automotive, and chemical processes. Having taken part in the development of an internal testing framework to attend to the various needs of the applications he worked with, and having always been interested in testing and software quality, in 2012, Bruno took note of pytest and immediately fell in love with the project. He started contributing whenever he could and has been a pytest core contributor since 2014.
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
