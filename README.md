@@ -60,7 +60,11 @@ With the following software and hardware list you can run all code files present
 
 ## Errata 
  * Page 32 (line 3):  **pytest -x --lf** _should be_ **pytest --x --ff.** 
- * Page 41 (line 11):  **For more details, go to:https:/ / docs. python. org/ 3/ library/configparser. html** _should be_ **For more details, go to: https:/ / docs. python. org/ 3/ library/configparser. htm**
+ * Page 41 (line 11):  **For more details, go to:https:/ / docs. python. org/ 3/ library/configparser. html** _should be_ **For more details, go to: https:/ / docs. python. org/ 3/ library/configparser. html**
+  * Page 83 (line 3):  **Why pytest use py.local instead of pathlib.Path?** _should be_ **Why does pytest use py.path.local instead of pathlib.Path?** 
+  * **tmpdir** is now deprecated in favor of **tmp_path** as **tmpdir_factory** is in favor of **tmp_path_factory**.
+  
+ 
 
 ## Get to Know the Author
 
